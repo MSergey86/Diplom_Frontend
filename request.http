@@ -1,0 +1,32 @@
+GET http://localhost:8000/admin/accounts/user/
+###
+GET http://localhost:8000/file/
+###
+POST http://localhost:8000/register/
+Content-Type: application/json
+
+{
+    "username": "POP",
+    "password": "1234jijkj"
+}
+###
+POST http://localhost:8000/file/
+Content-Type: application/json
+
+{
+    "user": 2,
+    "original_name": "File_1",
+    "comment": "First_file"
+}
+###
+PATCH  http://localhost:8000/file/6/
+Content-Type: application/json
+
+{
+    "comment": "NEW comment"
+}
+###
+DELETE http://localhost:8000/file/6/
+
+###
+PUT  - меняте все кроме id
